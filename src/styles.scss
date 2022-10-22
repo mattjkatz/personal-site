@@ -1,1 +1,17 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+
+// @font-face {
+//     font-family: lato;
+//     src: url(assets/fonts/ComicPapyrus.ttf) format("truetype");
+// }
+
+* {
+    height: 100%;
+    width: 100%;
+    font-family: 'Oswald';
+}
+
+body {
+    margin: 0;
+}
