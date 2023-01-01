@@ -1,31 +1,140 @@
 .page {
     display: flex;
+    flex-direction: column;
     height: 100%;
     width: 100%;
-    background-color: #161718;
+    padding: 18vh 12vw;
+}
 
-    .gutter-left {
-        height: 100%;
-        width: 15%;
-        border: 1px solid white;
+.hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+    &__eyebrow {
+        text-align: left;
+        font-size: 3.2vw;
+    }
+
+    &__title {
+        margin-top: -0.4vw;
+        text-align: right;
+        font-size: 11vw;
+    }
+
+
+    &__subtitle {
+        font-size: 5vw;
+    }
+
+
+}
+
+
+.rotator-wrapper {
+    align-items: flex-end;
+    margin-top: -3vw;
+    margin-bottom: 12vw;
+    position: relative;
+
+  }
+  .rotator-wrapper span {
+    display: inline-block;
+    min-width: 155px;
+    text-align: right;
+  }
+  .rotator-wrapper span span {
+    position: absolute;
+    font-weight: bold;
+    top: -0px;
+    right: 0;
+    opacity: 0;
+    animation: rotateWord 9s linear infinite 0s;
+    color: #cba1ff;
+  }
+  .rotator-wrapper span span:nth-child(2) {
+    animation-delay: 3s;
+  }
+  .rotator-wrapper span span:nth-child(3) {
+    animation-delay: 6s;
+  }
+//   .rotator-wrapper span span:nth-child(4) {
+//     animation-delay: 9s;
+//   }
+//   .rotator-wrapper span span:nth-child(5) {
+//     animation-delay: 12s;
+//   }
+  @keyframes rotateWord {
+    0% {
+      opacity: 0;
+    }
+    2% {
+      opacity: 0;
+      transform: translateY(-30px);
+    }
+    5% {
+      opacity: 1;
+      transform: translateY(0px);
+    }
+    15% {
+      opacity: 1;
+      transform: translateY(0px);
+    }
+    20% {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    80% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+
+.skills {
+    padding: 8vw 0;
+    // background-color: #332445;
+
+    h4 {
+        font-style: italic;
         text-align: center;
+        font-size: 1.8vw;
+        margin-bottom: 6vw;
     }
 
-    .gutter-right {
-        height: 100%;
-        width: 15%;
-        border: 1px solid white;
-        text-align: center;
+    .c-column {
+        display: flex;
+        justify-content: space-between;
     }
 
-    .main {
-        height: 100%;
-        width: 70%;
-        border: 1px solid white;
-        text-align: center;
+    .column {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        ul {
+            list-style: none;
+            width: max-content;
+            // display: flex;
+            // flex-direction: column;
+            // align-items: center;
+
+            li {
+                text-align: left;
+                height: 4vw;
+                margin: 0;
+                font-size: 3.2vw;
+                transition: all 0.7s;
+
+                &:hover {
+                    transform: translateX(2vw);
+                    font-size: 3.6vw;
+                    color: #cba1ff;
+                }
+            }
+        }
     }
 
-    h1 {
-        font-size: 3vw;
-    }
 }
